@@ -1,0 +1,18 @@
+<div class="mt-5 ms-5">
+    <button class="btn btn-primary btn-lg" [routerLink]="'/home-page'">Back To Home Page</button>
+    <!-- Display 'studentName' from Parent to child using Subject -->
+    <div class="mt-5">
+        <h5> <b>{{title_1}} : </b> {{studentName}} </h5>
+    </div>
+    <!-- Display 'userName' from Parent to child using Signal -->
+    <div class="mt-5">
+        <h5> <b>{{title_12}} : </b> {{userName()}} </h5>
+    </div>
+</div>
+
+<!-- Display 'user name & user age' from Parent to child using Observable -->
+<div class="mt-5 ms-5" *ngIf="user$ | async as user">
+    <h5> <b> {{title_3}} : </b>
+        Username => {{ user.name }}, Age => {{ user.age }} </h5>
+
+</div>

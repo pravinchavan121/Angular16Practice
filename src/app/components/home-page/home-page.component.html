@@ -1,0 +1,14 @@
+<div class="mt-5 ms-5">
+    <h5> <u>{{title_1}}</u></h5>
+    <br>
+    <h6>{{title_2}}</h6>
+    <br>
+    <select name="" id="" class="form-control w-25" [(ngModel)]="selectedValue" (change)="getStudentName()">
+        <option [value]="item" *ngFor="let item of studentName"> {{item}} </option>
+    </select>
+</div>
+
+<div class="mt-5 ms-5">
+    <h5><u>{{title_3}}</u></h5>
+    <button type="button" class="btn btn-primary"  [routerLink]="'/student-details'">Student Detail</button>
+</div>
